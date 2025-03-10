@@ -1,0 +1,16 @@
+{
+  "name": "nivel_heroi",
+  "version": "1.0.0",
+  "description": "Desafio de Logica Programacao - DIO",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "Denny Paulista Azevedo Filho",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.1.0"
+  }
+}

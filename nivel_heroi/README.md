@@ -26,3 +26,9 @@ Se XP for maior do que 10.000 = Radiante
 
 Ao final deve exibir uma mensagem:
 "O herói de nome **[NOME]** está no nível de  **[NÍVEL]**"
+
+## Testes
+
+Para fazer os testes automáticos foi utilizado os pacotes mocha e chai.
+
+executar com: `npm test`
