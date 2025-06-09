@@ -5,20 +5,6 @@ const rl = readline.createInterface({
 	output: process.stdout
 })
 
-function entradaDados() {
-	rl.question("Digite o nome do heroi: ", (answer) => {
-		const heroName = answer
-		rl.close()
-	})
-
-	rl.question("Digite o valor de XP do herói: ", (answer) => {
-		const heroXP = answer
-		rl.close()
-	})
-
-	return hero[heroName, heroXP]
-}
-
 // Função que retorna uma Promise para cada pergunta
 function pergunta(promptText) {
     return new Promise(resolve => {
