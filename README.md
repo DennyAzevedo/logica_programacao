@@ -1,6 +1,7 @@
 # Lógica Programação
 
-Projeto desenvolvido para treinamento.  
+Projeto desenvolvido para treinamento.
+
 Projetos baseados no curso [DIO](https://web.dio.me/home)
 
 ### Formação Lógica de Programação

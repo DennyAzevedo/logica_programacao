@@ -5,19 +5,28 @@ const rl = readline.createInterface({
 	output: process.stdout
 })
 
-function entradaDados() {
-	rl.question("Digite o nome do heroi: ", (answer) => {
-		const heroName = answer
-		rl.close()
-	})
-
-	rl.question("Digite o valor de XP do herói: ", (answer) => {
-		const heroXP = answer
-		rl.close()
-	})
-
-	return hero[heroName, heroXP]
+// Função que retorna uma Promise para cada pergunta
+function pergunta(promptText) {
+    return new Promise(resolve => {
+        rl.question(promptText, answer => {
+            resolve(answer);
+        });
+    });
 }
+
+// Entrada de dados principal
+async function entradaDados() {
+    const heroName = await pergunta("Digite o nome do herói: ");
+    const heroXP   = await pergunta("Digite o valor de XP do herói: ");
+    // Fechamos a interface só depois da última resposta
+    rl.close();
+
+    return {
+        heroName,
+        heroXP : parseInt(heroXP, 10)
+    };
+}
+
 
 function heroLevel(heroName, heroXP) {
 	let heroLevel = ""
@@ -43,12 +52,11 @@ function heroLevel(heroName, heroXP) {
 	return `O herói ${heroName} está no nível ${heroLevel}`
 }
 
-//const hero = entradaDados()
-//console.log(heroLevel(hero[0], hero[1]))
+const hero = entradaDados()
+console.log(hero.heroName, hero.heroXP)
 
 // Export the function for testing
 module.exports = { heroLevel };
 
 // Testando a função
 // $ node index.js
-
